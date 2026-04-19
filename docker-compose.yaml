@@ -1,7 +1,7 @@
 
 services:
   db:
-    image: postgres
+    image: postgres:16
     container_name: statvault-db
     environment:
       POSTGRES_USER: admin
