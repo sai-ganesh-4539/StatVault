@@ -1,0 +1,446 @@
+STATVAULT AI
+FIFA + EPL FOOTBALL INTELLIGENCE PLATFORM
+
+Owner:
+Avinash
+
+Version:
+2.0
+
+Tech Stack:
+
+* Python
+* XGBoost
+* Scikit-Learn
+
+
+League Coverage:
+
+* English Premier League (EPL)
+* FIFA International Matches
+* FIFA World Cup History
+
+======================================================================
+PROJECT VISION
+==============
+
+Build an AI-powered Football Intelligence Platform capable of:
+
+1. Match Outcome Prediction
+2. Team Strength Analysis
+3. Player Scouting
+4. Similar Player Discovery
+5. Performance Anomaly Detection
+
+
+======================================================================
+DATASET STRATEGY
+================
+
+Use ONLY reliable, well-known Kaggle datasets.
+
+NO manual download.
+
+All datasets must be downloaded automatically using Kaggle API.
+
+Install:
+
+pip install kaggle
+
+Configure:
+
+C:\Users<USER>.kaggle\kaggle.json
+
+======================================================================
+DATASET DOWNLOAD SCRIPT
+=======================
+
+Create:
+
+scripts/download_datasets.py
+
+Commands:
+
+# International Football Results
+
+kaggle datasets download -d martj42/international-football-results-from-1872-to-2017 -p data/raw/international --unzip
+
+# FIFA Rankings
+
+kaggle datasets download -d tadhgfitzgerald/fifa-international-soccer-mens-ranking-1993now -p data/raw/fifa_rankings --unzip
+
+# Club Football Matches
+
+kaggle datasets download -d adamgbor/club-football-match-data-2000-2025 -p data/raw/club_matches --unzip
+
+# FIFA 23 Complete Dataset
+
+kaggle datasets download -d stefanoleone992/fifa-23-complete-player-dataset -p data/raw/fifa23 --unzip
+
+# FIFA 22 Complete Dataset
+
+kaggle datasets download -d stefanoleone992/fifa-22-complete-player-dataset -p data/raw/fifa22 --unzip
+
+# Football Players Stats
+
+kaggle datasets download -d hubertsidorowicz/football-players-stats-2024-2025 -p data/raw/player_stats --unzip
+
+# Player Scores Dataset
+
+kaggle datasets download -d davidcariboo/player-scores -p data/raw/player_scores --unzip
+
+======================================================================
+PHASE 1
+DATA COLLECTION
+===============
+
+Goal:
+
+Collect:
+
+* Match Data
+* Player Data
+* FIFA Rankings
+* Historical Results
+* Player Valuations
+* Team Statistics
+
+Output:
+
+data/raw/
+
+======================================================================
+PHASE 2
+DATA WAREHOUSE
+==============
+
+Database:
+
+PostgreSQL
+
+Tables:
+
+fact_matches
+
+fact_players
+
+fact_team_stats
+
+fact_player_stats
+
+dim_teams
+
+dim_players
+
+dim_competitions
+
+dim_countries
+
+dim_seasons
+
+======================================================================
+PHASE 3
+EDA
+===
+
+File:
+
+notebooks/eda.ipynb
+
+Generate:
+
+1. Missing Value Report
+
+2. Outlier Report
+
+3. Team Distribution
+
+4. Goal Distribution
+
+5. Ranking Distribution
+
+6. Correlation Matrix
+
+7. Player Attribute Analysis
+
+8. Data Quality Report
+
+Output:
+
+reports/eda/
+
+======================================================================
+PHASE 4
+FEATURE ENGINEERING
+===================
+
+File:
+
+src/features/build_features.py
+
+---
+
+## MATCH FEATURES
+
+Team Form
+
+* Last 5 Wins
+* Last 5 Draws
+* Last 5 Losses
+* PPG
+
+Goals
+
+* Goals Scored
+* Goals Conceded
+* Goal Difference
+
+Home Advantage
+
+* Home Win Rate
+* Away Win Rate
+
+Historical
+
+* Head-to-Head Wins
+* Head-to-Head Draws
+
+Ranking Features
+
+* FIFA Rank
+* Rank Difference
+* ELO Difference
+
+Rolling Statistics
+
+* Rolling Goals
+* Rolling xG
+* Rolling xGA
+
+---
+
+## PLAYER FEATURES
+
+* Age
+* Height
+* Weight
+* Overall Rating
+* Potential
+* Pace
+* Shooting
+* Passing
+* Dribbling
+* Defending
+* Physical
+* Preferred Foot
+* Position
+
+Output:
+
+data/features/
+
+======================================================================
+PHASE 5
+MATCH PREDICTION MODEL
+======================
+
+File:
+
+src/models/train_match_predictor.py
+
+Model:
+
+XGBoost Classifier
+
+Target:
+
+Home Win
+Draw
+Away Win
+
+Outputs:
+
+models/match_predictor.pkl
+
+Metrics:
+
+Accuracy
+Precision
+Recall
+F1
+ROC-AUC
+
+Target:
+
+Accuracy > 60%
+
+======================================================================
+PHASE 6
+PLAYER SCOUTING ENGINE
+======================
+
+File:
+
+src/models/player_clustering.py
+
+Model:
+
+KMeans
+
+Clusters:
+
+* Poacher
+* Playmaker
+* Winger
+* Ball Winner
+* Target Man
+* Box-to-Box
+
+Outputs:
+
+models/player_clusters.pkl
+
+reports/player_profiles.json
+
+======================================================================
+PHASE 7
+SIMILAR PLAYER SEARCH
+=====================
+
+File:
+
+src/models/player_similarity.py
+
+Method:
+
+Cosine Similarity
+
+Input:
+
+Player Name
+
+Output:
+
+Top Similar Players
+
+Example:
+
+"Players similar to Kevin De Bruyne"
+
+======================================================================
+PHASE 8
+ANOMALY DETECTION
+=================
+
+File:
+
+src/models/anomaly_detection.py
+
+Model:
+
+Isolation Forest
+
+Detect:
+
+* Sudden Form Drop
+* Goal Surge
+* Unusual Statistics
+* Injury-like Performance
+
+Output:
+
+models/anomaly_detector.pkl
+
+
+======================================================================
+COMPLETE FOLDER STRUCTURE
+=========================
+
+statvault-ai/
+
+├── README.md
+├── requirements.txt
+├── docker-compose.yml
+│
+├── data/
+│   ├── raw/
+│   │   ├── international/
+│   │   ├── fifa_rankings/
+│   │   ├── club_matches/
+│   │   ├── fifa22/
+│   │   ├── fifa23/
+│   │   ├── player_stats/
+│   │   └── player_scores/
+│   │
+│   ├── processed/
+│   │
+│   ├── features/
+│   │
+│   └── knowledge/
+│       ├── players/
+│       ├── teams/
+│       ├── matches/
+│       └── history/
+│
+├── reports/
+│   ├── eda/
+│   ├── metrics/
+│   └── quality/
+│
+├── models/
+│   ├── match_predictor.pkl
+│   ├── player_clusters.pkl
+│   ├── anomaly_detector.pkl
+│   └── similarity_index.pkl
+│
+├── scripts/
+│   ├── ingest_data.py
+│   └── build_knowledge_base.py
+│
+├── src/
+│   ├── features/
+│   │   └── build_features.py
+│   │
+│   ├── models/
+│   │   ├── train_match_predictor.py
+│   │   ├── player_clustering.py
+│   │   ├── player_similarity.py
+│   │   └── anomaly_detection.py
+│   │
+│
+├── notebooks/
+│   ├── eda.ipynb
+│   └── experiments.ipynb
+│
+│
+└── tests/
+
+======================================================================
+FINAL DELIVERABLES
+==================
+
+✓ Match Prediction Engine
+
+✓ Player Scouting Engine
+
+✓ Similar Player Search
+
+✓ Football RAG System
+
+✓ Grok AI Assistant
+
+✓ Explainable Predictions
+
+✓ Team Analytics
+
+✓ Historical Football Knowledge Base
+
+✓ FastAPI Backend
+
+✓ React Dashboard
+
+✓ PostgreSQL + PGVector Integration
+
+
+
+

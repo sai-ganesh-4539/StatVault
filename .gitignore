@@ -1,73 +1,55 @@
-# ==================== PYTHON CACHE ====================
+# ==========================================
+# STATVAULT AI - .gitignore
+# ==========================================
 
-**pycache**/
+# 1. DATA & REPORTS (Ignore CSV and JSON files)
+*.csv
+*.json
+
+# 2. MACHINE LEARNING MODELS (Explicitly ensure PKL files are tracked)
+!*.pkl
+
+# 3. Python Artifacts
+__pycache__/
 *.py[cod]
 *$py.class
 *.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
 
-# ==================== VIRTUAL ENVIRONMENT ====================
-
-.venv/
+# 4. Virtual Environments
 venv/
-ENV/
 env/
-.pytest_cache/
+ENV/
+.venv
 
-# ==================== IDE ====================
+# 5. Jupyter Notebooks Checkpoints
+.ipynb_checkpoints/
 
+# 6. IDE & OS Files
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
 .DS_Store
+Thumbs.db
 
-# ==================== JUPYTER ====================
-
-.ipynb_checkpoints/
-
-# ==================== ENV ====================
-
+# 7. Environment Variables & Secrets (Never push these)
 .env
 .env.local
-.env.*.local
-
-# ==================== LOGS ====================
-
-*.log
-logs/
-
-# ==================== TEMP ====================
-
-*.tmp
-*.temp
-
-# ==================== DATABASES ====================
-
-*.sqlite
-*.db
-
-# ==================== RAW DATASETS ====================
-
-ml/data/raw/
-*.csv
-*.xlsx
-
-# ==================== GENERATED REPORTS ====================
-
-ml/reports/
-ml/outputs/
-ml/data/reports/
-
-# ==================== KEEP THESE FILE TYPES ====================
-
-!*.py
-!*.yaml
-!*.yml
-!*.md
-!*.txt
-!*.parquet
-!*.pkl
-!*.npy
-!*.onnx
-!*.json
+kaggle.json
