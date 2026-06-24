@@ -1,123 +1,234 @@
-<!-- ================= HERO ================= -->
+# ⚽ StatVault AI
 
 <div align="center">
 
-# ⚽ StatVault AI
+### Enterprise Football Intelligence Platform
 
-### Football Intelligence Platform
+**Predict Match Outcomes • Discover Talent • Detect Anomalies • Estimate Market Value**
 
-Predict Match Outcomes • Scout Players • Detect Anomalies • Estimate Market Value
+<br>
 
-<p align="center">
-
-<img src="https://img.shields.io/badge/Python-3.11-blue?logo=python">
-<img src="https://img.shields.io/badge/XGBoost-Latest-orange">
-<img src="https://img.shields.io/badge/PostgreSQL-16-blue">
-<img src="https://img.shields.io/badge/ONNX-Ready-success">
-<img src="https://img.shields.io/badge/Status-Production-green">
-
+<p>
+<img src="https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge&logo=python&logoColor=white">
+<img src="https://img.shields.io/badge/XGBoost-Latest-orange?style=for-the-badge">
+<img src="https://img.shields.io/badge/PostgreSQL-16-336791?style=for-the-badge&logo=postgresql">
+<img src="https://img.shields.io/badge/ONNX-Ready-success?style=for-the-badge">
+<img src="https://img.shields.io/badge/Status-In%20Development-blue?style=for-the-badge">
+<img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge">
 </p>
+
+<br>
+
+### Data → Features → Models → Intelligence
+
+---
+
+### 🚀 Building the Next Generation Football Analytics Engine
+
+StatVault AI is a production-oriented Machine Learning platform that transforms raw football datasets into predictive intelligence for analysts, scouts, clubs, and researchers.
 
 </div>
 
 ---
 
-## 🎥 Demo
+# 🌟 Platform Overview
+
+StatVault combines:
+
+* ⚽ Match Outcome Prediction
+* 💰 Player Market Value Estimation
+* 🧠 Player Similarity Discovery
+* 🚨 Performance Anomaly Detection
+* 📈 Model Evaluation & Benchmarking
+* 🚀 ONNX Production Deployment
+
+into a unified football intelligence ecosystem.
+
+---
+
+# 🎥 Demo
 
 <p align="center">
-
 <img width="100%" src="assets/demo.gif">
-
 </p>
 
 ---
 
-## 📊 Platform Capabilities
-
-| Capability | Description |
-|------------|-------------|
-| ⚽ Match Prediction | Predict Home Win / Draw / Away Win |
-| 💰 Market Value | Estimate player transfer value |
-| 🧠 Similarity Search | Find players with similar profiles |
-| 🚨 Anomaly Detection | Detect unusual player performance |
-| 📈 Evaluation Suite | Full metrics & reports |
-| 🚀 ONNX Deployment | Production-ready exports |
-
----
-
-## 🏛 Architecture
+# 🏛 Enterprise Architecture
 
 ```mermaid
 graph LR
 
-A[Raw Datasets]
---> B[Data Validation]
+A[Historical Football Data]
 
-B --> C[Data Cleaning]
+A --> B1[Transfermarkt]
+A --> B2[FBRef]
+A --> B3[FIFA Datasets]
+A --> B4[Match Datasets]
 
-C --> D[Feature Engineering]
+B1 --> C[Data Warehouse]
+B2 --> C
+B3 --> C
+B4 --> C
 
-D --> E[Match Prediction]
+C --> D[Validation Layer]
+D --> E[Feature Engineering]
 
-D --> F[Market Value Prediction]
+E --> F1[Match Prediction]
+E --> F2[Market Value Prediction]
+E --> F3[Player Clustering]
+E --> F4[Anomaly Detection]
 
-D --> G[Player Clustering]
+F1 --> G[Intelligence Layer]
+F2 --> G
+F3 --> G
+F4 --> G
 
-D --> H[Anomaly Detection]
+G --> H[Evaluation Suite]
+H --> I[ONNX Deployment]
 
-E --> I[Model Evaluation]
-F --> I
-G --> I
-H --> I
-
-I --> J[ONNX Export]
-
-J --> K[Deployment]
+I --> J[Production APIs]
 ```
 
 ---
 
-## 🧬 End-to-End ML Lifecycle
+# 🧠 Intelligence Modules
+
+| Module                 | Objective                   | Output            |
+| ---------------------- | --------------------------- | ----------------- |
+| ⚽ Match Prediction     | Predict match outcomes      | Win / Draw / Loss |
+| 💰 Market Value Engine | Estimate transfer value     | Market Value (€)  |
+| 🧠 Scout Engine        | Similar player discovery    | Player Archetypes |
+| 🚨 Anomaly Engine      | Detect abnormal performance | Risk Scores       |
+| 📈 Evaluation Suite    | Benchmark models            | Metrics Reports   |
+| 🚀 ONNX Runtime        | Production inference        | ONNX Models       |
+
+---
+
+# 🔄 End-to-End Machine Learning Lifecycle
 
 ```mermaid
 journey
-
 title StatVault ML Lifecycle
 
 section Data
-
 Collect Datasets: 5
 Validate Data: 5
 Clean Data: 5
 
 section Features
-
 Engineer Features: 5
-Generate Training Sets: 5
+Build Feature Store: 5
 
-section Models
-
+section Training
 Train Models: 5
-Evaluate Models: 5
+Tune Hyperparameters: 5
+
+section Evaluation
+Generate Reports: 5
+Benchmark Models: 5
 
 section Deployment
-
 Export ONNX: 5
-Deploy: 5
+Deploy Models: 5
 ```
 
 ---
 
-## 📁 Repository Structure
+# ⚙ Data Pipeline
+
+```mermaid
+flowchart LR
+
+RAW[Raw Data]
+--> VALIDATE[Validation]
+
+VALIDATE
+--> CLEAN[Cleaning]
+
+CLEAN
+--> FEATURES[Feature Engineering]
+
+FEATURES
+--> TRAIN[Model Training]
+
+TRAIN
+--> EVAL[Evaluation]
+
+EVAL
+--> EXPORT[ONNX Export]
+
+EXPORT
+--> DEPLOY[Production]
+```
+
+---
+
+# 📊 Development Roadmap
+
+```mermaid
+timeline
+
+title StatVault ML Engineering Roadmap
+
+Week 1 : Dataset Collection
+       : Data Validation
+       : EDA
+
+Week 2 : Feature Engineering
+       : Feature Store
+
+Week 3 : Match Prediction
+       : XGBoost Training
+
+Week 4 : Market Value Prediction
+
+Week 5 : Player Clustering
+
+Week 6 : Anomaly Detection
+
+Week 7 : Model Evaluation
+
+Week 8 : ONNX Export
+       : Deployment
+```
+
+---
+
+# 🤖 Model Zoo
+
+| Model              | Framework    | Purpose                 |
+| ------------------ | ------------ | ----------------------- |
+| XGBoost Classifier | XGBoost      | Match Prediction        |
+| XGBoost Regressor  | XGBoost      | Market Value Prediction |
+| KMeans             | Scikit-Learn | Player Clustering       |
+| Isolation Forest   | Scikit-Learn | Anomaly Detection       |
+
+---
+
+# 🎯 KPI Targets
+
+| Metric                      | Target  |
+| --------------------------- | ------- |
+| Match Prediction Accuracy   | > 60%   |
+| Market Value R²             | > 0.80  |
+| Clustering Silhouette Score | > 0.50  |
+| Anomaly Precision           | > 75%   |
+| Inference Latency           | < 100ms |
+| API Response Time           | < 300ms |
+
+---
+
+# 📁 Repository Structure
 
 ```text
-statvault-ml
+statvault-ai
 │
-├── data
-├── notebooks
-├── models
-├── reports
-├── outputs
+├── data/
+├── notebooks/
+├── models/
+├── outputs/
+├── reports/
 │
 ├── build_features.py
 ├── train_xgboost.py
@@ -127,136 +238,3 @@ statvault-ml
 ├── evaluate_models.py
 └── export_onnx.py
 ```
-
----
-
-## ⚙ Data Pipeline
-
-```mermaid
-flowchart TB
-
-RAW[Raw Data]
-
-RAW --> CLEAN[Cleaning]
-
-CLEAN --> FE[Feature Engineering]
-
-FE --> TRAIN[Training]
-
-TRAIN --> EVAL[Evaluation]
-
-EVAL --> EXPORT[ONNX Export]
-
-EXPORT --> PROD[Production]
-```
-
----
-
-## 🤖 Models
-
-### Match Prediction
-
-| Property | Value |
-|-----------|---------|
-| Algorithm | XGBoost |
-| Type | Multi-Class Classification |
-| Classes | Win / Draw / Loss |
-| Target Accuracy | > 60% |
-
----
-
-### Market Value Prediction
-
-| Property | Value |
-|-----------|---------|
-| Algorithm | XGBoost Regressor |
-| Target | Market Value (€) |
-| Metric | R² |
-
----
-
-### Clustering
-
-| Property | Value |
-|-----------|---------|
-| Algorithm | KMeans |
-| Output | Player Archetypes |
-
----
-
-### Anomaly Detection
-
-| Property | Value |
-|-----------|---------|
-| Algorithm | Isolation Forest |
-| Output | Anomaly Score |
-
----
-
-## 📈 Example Dashboard
-
-<div align="center">
-
-<img width="90%" src="assets/dashboard.png">
-
-</div>
-
----
-
-## 🎯 KPI Targets
-
-| Metric | Target |
-|---------|---------|
-| Match Accuracy | >60% |
-| Market Value R² | >0.80 |
-| Silhouette Score | >0.50 |
-| Anomaly Precision | >75% |
-| Inference Time | <100ms |
-
----
-
-## 🚀 Quick Start
-
-```bash
-git clone repo-url
-
-cd statvault-ml
-
-pip install -r requirements.txt
-
-python build_features.py
-
-python train_xgboost.py
-
-python evaluate_models.py
-```
-
----
-
-## 🗺 Roadmap
-
-- [x] Dataset Collection
-- [x] EDA
-- [x] Feature Engineering
-- [ ] Match Prediction
-- [ ] Market Value Prediction
-- [ ] Clustering
-- [ ] Anomaly Detection
-- [ ] ONNX Export
-- [ ] Deployment
-
----
-
-## 📜 License
-
-MIT License
-
----
-
-<div align="center">
-
-### Built for Football Intelligence
-
-⚽ Data → Features → Models → Insights
-
-</div>
