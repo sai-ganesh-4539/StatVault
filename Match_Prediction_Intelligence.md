@@ -178,24 +178,26 @@ Away:[0.51,0.46]
 
 ---
 
-# 🌊 PREDICTION FLOW
+# 🌊 PREDICTION FLOW ANALYSIS
 
 ```mermaid
-sankey-beta
+flowchart LR
 
-Home,Correct Home,5351
-Home,Draw,2663
-Home,Away,2133
+A[Actual Home<br>10,147]
+A --> B[Predicted Home<br>5,351]
+A --> C[Predicted Draw<br>2,663]
+A --> D[Predicted Away<br>2,133]
 
-Draw,Home,2025
-Draw,Correct Draw,1958
-Draw,Away,2043
+E[Actual Draw<br>6,026]
+E --> F[Predicted Home<br>2,025]
+E --> G[Predicted Draw<br>1,958]
+E --> H[Predicted Away<br>2,043]
 
-Away,Home,1557
-Away,Draw,1810
-Away,Correct Away,3516
+I[Actual Away<br>6,883]
+I --> J[Predicted Home<br>1,557]
+I --> K[Predicted Draw<br>1,810]
+I --> L[Predicted Away<br>3,516]
 ```
-
 ---
 
 # 🛡️ DATA QUALITY OBSERVATORY
