@@ -1,48 +1,70 @@
-# ⚽ MATCH_PREDICTION_INTELLIGENCE.md
+# ⚽ STATVAULT MATCH PREDICTION INTELLIGENCE CENTER
 
 <div align="center">
 
-# 🧠 StatVault Match Outcome Prediction System
+# 🧠 Enterprise Football Forecasting Platform
 
-### Enterprise Football Forecasting Intelligence Platform
+<img src="https://img.shields.io/badge/XGBoost-v2.0-success?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Dataset-230K%2B_Matches-blue?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Features-18-orange?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Accuracy-46.95%25-yellow?style=for-the-badge" />
+<img src="https://img.shields.io/badge/ROC--AUC-0.6461-brightgreen?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Status-Production_Ready-success?style=for-the-badge" />
 
-![Version](https://img.shields.io/badge/Version-2.0-success)
-![Model](https://img.shields.io/badge/Model-XGBoost-blue)
-![Matches](https://img.shields.io/badge/Matches-230K+-orange)
-![Features](https://img.shields.io/badge/Features-18-purple)
-![Status](https://img.shields.io/badge/Status-Production_Ready-success)
+<br><br>
+
+## 🚀 AI-Powered Match Outcome Prediction Engine
+
+### Predicting Home Wins • Draws • Away Wins from 230K+ Historical Matches
 
 ---
-
-## 🎯 Executive Summary
-
-Predicting football match outcomes using historical match statistics, betting market intelligence, ELO ratings, and team form metrics.
-
-**Prediction Classes**
-
-🏠 Home Win
-🤝 Draw
-✈️ Away Win
 
 </div>
 
----
+# 🎯 EXECUTIVE OVERVIEW
 
-# 🚀 EXECUTIVE COMMAND CENTER
+<table>
+<tr>
+<td width="33%">
 
-```text
-╔══════════════════════════════════════════════════════════════╗
-║                    MODEL OVERVIEW                           ║
-╠══════════════════════════════════════════════════════════════╣
-║ Dataset Size              230,554 Matches                   ║
-║ Features                  18                                ║
-║ Train Size                184,443                           ║
-║ Validation Size           23,055                            ║
-║ Test Size                 23,056                            ║
-║ Model Type                XGBoost Classifier               ║
-║ Prediction Classes        Home / Draw / Away              ║
-╚══════════════════════════════════════════════════════════════╝
-```
+### 📦 Dataset
+
+| Metric | Value |
+|---------|--------|
+| Matches | 230,554 |
+| Features | 18 |
+| Columns | 49 |
+| Memory | 182 MB |
+
+</td>
+
+<td width="33%">
+
+### 🧠 Model
+
+| Metric | Value |
+|---------|--------|
+| Algorithm | XGBoost |
+| Version | 2.0 |
+| Classes | 3 |
+| Split | Chronological |
+
+</td>
+
+<td width="33%">
+
+### 🎯 Performance
+
+| Metric | Value |
+|---------|--------|
+| Accuracy | 46.95% |
+| ROC-AUC | 0.6461 |
+| Top-2 Accuracy | 75.51% |
+| Log Loss | 1.0338 |
+
+</td>
+</tr>
+</table>
 
 ---
 
@@ -51,194 +73,150 @@ Predicting football match outcomes using historical match statistics, betting ma
 ```mermaid
 flowchart LR
 
-A[Historical Match Data]
+A["⚽ 230,554 Historical Matches"]
 
-A --> B[Data Quality Engine]
+A --> B["🛡️ Data Quality Engine"]
 
-B --> C[Feature Engineering]
+B --> C["⚙️ Feature Engineering"]
 
-C --> D[ELO Ratings]
+C --> D["📊 18 Production Features"]
 
-C --> E[Betting Odds]
+D --> E["🧠 XGBoost Classifier"]
 
-C --> F[Team Form]
+E --> F["🎲 Probability Engine"]
 
-D --> G[XGBoost Model]
-E --> G
-F --> G
+F --> G["🏠 Home Win"]
+F --> H["🤝 Draw"]
+F --> I["✈️ Away Win"]
 
-G --> H[Probability Engine]
+G --> J["🎯 Confidence Layer"]
+H --> J
+I --> J
 
-H --> I[Home Win]
-H --> J[Draw]
-H --> K[Away Win]
-
-I --> L[Decision Layer]
-J --> L
-K --> L
+J --> K["🚀 Production Predictions"]
 ```
 
 ---
 
-# 📊 DATASET SPLIT
+# 📦 DATA SPLIT STRATEGY
 
 ```mermaid
-pie title Chronological Dataset Split
+pie title Chronological Dataset Distribution
 
-"Training" : 184443
-"Validation" : 23055
-"Testing" : 23056
+"Training 184,443" : 184443
+"Validation 23,055" : 23055
+"Testing 23,056" : 23056
 ```
 
 ---
 
-# 📈 MODEL PERFORMANCE DASHBOARD
+# 🚀 PERFORMANCE COMMAND CENTER
 
-| Metric            | Score  |
-| ----------------- | ------ |
-| Accuracy          | 46.95% |
-| Balanced Accuracy | 45.44% |
-| Macro Precision   | 45.35% |
-| Macro Recall      | 45.44% |
-| Macro F1          | 45.26% |
-| Weighted F1       | 47.31% |
-| ROC-AUC OVR       | 0.6461 |
-| Top-2 Accuracy    | 75.51% |
-| Log Loss          | 1.0338 |
-| Calibration Error | 0.0312 |
+| Metric | Score |
+|----------|----------|
+| Accuracy | **46.95%** |
+| Balanced Accuracy | **45.44%** |
+| Macro Precision | **45.35%** |
+| Macro Recall | **45.44%** |
+| Macro F1 | **45.26%** |
+| Weighted F1 | **47.31%** |
+| ROC-AUC (OVR) | **64.61%** |
+| Top-2 Accuracy | **75.51%** |
+| Calibration Error | **3.12%** |
+| Mean Confidence | **46.79%** |
 
 ---
 
-# 🎯 PERFORMANCE VISUALIZATION
+# 📊 PERFORMANCE VISUALIZATION
+
+## Accuracy
 
 ```text
-Accuracy
-
-███████████████████████░░░░░░░░░░░░░░░░░░░░░░░░ 46.95%
-
-Balanced Accuracy
-
-██████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░ 45.44%
-
-ROC-AUC
-
-████████████████████████████████░░░░░░░░░░░░░░░ 64.61%
-
-Top-2 Accuracy
-
-██████████████████████████████████████░░░░░░░░░ 75.51%
+███████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 46.95%
 ```
 
----
-
-# 🏆 PREDICTION ECOSYSTEM
-
-```mermaid
-journey
-
-title Match Outcome Prediction Pipeline
-
-section Data
-
-Collect Matches: 5
-Validate Data: 5
-
-section Features
-
-Generate ELO Features: 5
-Generate Form Features: 5
-Generate Betting Features: 5
-
-section Modeling
-
-Train XGBoost: 5
-Evaluate Model: 5
-
-section Production
-
-Export ONNX: 5
-Deploy Model: 5
-```
-
----
-
-# 🔥 FEATURE IMPORTANCE NETWORK
-
-```mermaid
-graph TD
-
-A[Prediction Engine]
-
-A --> B[oddhome]
-A --> C[oddaway]
-
-A --> D[maxaway]
-A --> E[odddraw]
-
-A --> F[maxhome]
-
-A --> G[awayelo]
-A --> H[homeelo]
-
-A --> I[form3home]
-A --> J[form5home]
-
-A --> K[form3away]
-A --> L[form5away]
-```
-
----
-
-# 📊 TOP FEATURE DOMINANCE
+## Balanced Accuracy
 
 ```text
-oddhome           ████████████████████████████████████
+██████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 45.44%
+```
 
-oddaway           ██████████████████████████████████
+## ROC AUC
 
-maxaway           ██████
+```text
+████████████████████████████████░░░░░░░░░░░░░░░░░░░ 64.61%
+```
 
-odddraw           █████
+## Top-2 Accuracy
 
-maxhome           █████
+```text
+██████████████████████████████████████░░░░░░░░░░░░░ 75.51%
+```
 
-awayelo           ██
+---
 
-homeelo           ██
+# 🏆 FEATURE IMPORTANCE LEADERBOARD
 
-form3home         █
+```mermaid
+graph LR
 
-form5home         █
+A["🧠 Prediction Engine"]
 
-form3away         █
+A --> B["oddhome<br>20.85%"]
+A --> C["oddaway<br>20.51%"]
 
-form5away         █
+A --> D["maxaway<br>3.82%"]
+A --> E["odddraw<br>3.34%"]
+A --> F["maxhome<br>3.27%"]
+
+A --> G["awayelo"]
+A --> H["homeelo"]
+
+A --> I["form3home"]
+A --> J["form5home"]
+
+A --> K["form3away"]
+A --> L["form5away"]
+```
+
+---
+
+# 🎯 FEATURE POWER DISTRIBUTION
+
+```mermaid
+xychart-beta
+title "Top Feature Importance"
+
+x-axis [oddhome, oddaway, maxaway, odddraw, maxhome]
+
+y-axis "Gain" 0 --> 25
+
+bar [20.85, 20.51, 3.82, 3.34, 3.27]
 ```
 
 ---
 
 # 🧠 CLASSIFICATION REPORT
 
-| Class | Precision | Recall | F1   |
-| ----- | --------- | ------ | ---- |
-| Home  | 0.60      | 0.53   | 0.56 |
-| Draw  | 0.30      | 0.32   | 0.31 |
-| Away  | 0.46      | 0.51   | 0.48 |
+| Outcome | Precision | Recall | F1 Score |
+|----------|----------|----------|----------|
+| 🏠 Home | 0.60 | 0.53 | 0.56 |
+| 🤝 Draw | 0.30 | 0.32 | 0.31 |
+| ✈️ Away | 0.46 | 0.51 | 0.48 |
 
 ---
 
-# 🎯 CLASS PERFORMANCE MAP
+# 🎯 CLASS PREDICTION STRENGTH
 
 ```mermaid
 quadrantChart
-
-title Outcome Prediction Quality
+title Outcome Prediction Landscape
 
 x-axis Low Recall --> High Recall
 y-axis Low Precision --> High Precision
 
-quadrant-1 Strong
-quadrant-2 Precise
+quadrant-1 Elite
+quadrant-2 Accurate
 quadrant-3 Weak
 quadrant-4 Balanced
 
@@ -249,58 +227,66 @@ Away:[0.51,0.46]
 
 ---
 
-# 🔍 CONFUSION MATRIX
+# 🔥 CONFUSION MATRIX ANALYSIS
 
-## Raw Confusion Matrix
-
-```markdown
-![Confusion Matrix](../reports/confusion_matrix.png)
-```
-
----
-
-## Normalized Confusion Matrix
-
-```markdown
-![Normalized Confusion Matrix](../reports/confusion_matrix_normalized.png)
-```
-
----
-
-# 🌊 PREDICTION FLOW
-
-```mermaid
-flowchart TD
-
-ActualHome --> CorrectHome
-ActualHome --> PredictedDraw
-ActualHome --> PredictedAway
-
-ActualDraw --> PredictedHome
-ActualDraw --> CorrectDraw
-ActualDraw --> PredictedAway2
-
-ActualAway --> PredictedHome2
-ActualAway --> PredictedDraw2
-ActualAway --> CorrectAway
-```
-
----
-
-# 📡 MODEL CONFIDENCE CENTER
+## Actual Home Matches
 
 ```text
-Mean Confidence
+Correct Home Predictions      ████████████████████  5,351
 
-███████████████████████░░░░░░░░░░░░░░░░░░░░░░░░ 46.79%
+Predicted Draw                ██████████           2,663
 
-Confidence Std
+Predicted Away                ████████             2,133
+```
 
-█████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 11.40%
+## Actual Draw Matches
 
-Calibration Error
+```text
+Predicted Home                ███████              2,025
 
-█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 3.12%
+Correct Draw Predictions      ███████              1,958
+
+Predicted Away                ███████              2,043
+```
+
+## Actual Away Matches
+
+```text
+Predicted Home                ██████               1,557
+
+Predicted Draw                ███████              1,810
+
+Correct Away Predictions      ██████████████       3,516
+```
+
+---
+
+# 📊 NORMALIZED CONFUSION MATRIX
+
+| Actual ↓ / Predicted → | Home | Draw | Away |
+|----------|----------|----------|----------|
+| 🏠 Home | **53%** | 26% | 21% |
+| 🤝 Draw | 34% | **32%** | 34% |
+| ✈️ Away | 23% | 26% | **51%** |
+
+---
+
+# 🌊 PREDICTION FLOW MAP
+
+```mermaid
+sankey-beta
+
+Home Matches,Correct Home Predictions,5351
+Home Matches,Predicted Draw,2663
+Home Matches,Predicted Away,2133
+
+Draw Matches,Predicted Home,2025
+Draw Matches,Correct Draw Predictions,1958
+Draw Matches,Predicted Away,2043
+
+Away Matches,Predicted Home,1557
+Away Matches,Predicted Draw,1810
+Away Matches,Correct Away Predictions,3516
 ```
 
 ---
@@ -309,175 +295,208 @@ Calibration Error
 
 ```mermaid
 mindmap
-  root((Data Quality))
+  root((🛡️ Data Quality))
 
     Dataset
       230557 Rows
       49 Columns
+      182 MB
 
     Missing Values
-      HomeELO
-      AwayELO
-      HomeShots
-      AwayShots
+      HomeELO 38.58%
+      AwayELO 38.61%
 
-    Quality
-      Zero Duplicates
+      HomeShots 50.24%
+      AwayShots 50.23%
 
-    Memory
-      182MB
+      HomeTarget 50.59%
+      AwayTarget 50.58%
+
+    Integrity
+      Duplicate Rows 0
+
+    Constants
+      source_dataset
 ```
 
 ---
 
-# 🚨 DRIFT ANALYSIS
-
-```mermaid
-pie title Feature Stability
-
-"Stable Features" : 4
-"Drifted Features" : 8
-```
-
----
-
-# ⚠️ MODEL RISK MAP
-
-```mermaid
-mindmap
-  root((Model Risks))
-
-    Data
-      Missing Features
-      Drift
-
-    Football
-      Injuries
-      Transfers
-      Suspensions
-      Manager Changes
-
-    Modeling
-      Class Imbalance
-      Historical Bias
-
-    Deployment
-      Season Evolution
-```
-
----
-
-# 🔒 MODEL GOVERNANCE
+# 🚨 LEAKAGE PROTECTION WALL
 
 ```mermaid
 flowchart TD
 
-A[Data Validation]
+A["🚨 Potential Leakage Sources"]
 
-A --> B[Leakage Check]
+A --> B["fthome"]
+A --> C["ftaway"]
+A --> D["ftresult"]
 
-B --> C[Drift Analysis]
+A --> E["Match Statistics"]
 
-C --> D[Robustness Testing]
+E --> F["Shots"]
+E --> G["Corners"]
+E --> H["Cards"]
 
-D --> E[Calibration Testing]
+B --> I["❌ Removed"]
+C --> I
+D --> I
+F --> I
+G --> I
+H --> I
 
-E --> F[Deployment Approval]
+I --> J["✅ Clean Feature Space"]
 ```
 
 ---
 
-# 📈 PRODUCTION READINESS
-
-```text
-Data Quality               ████████████████████████████ 100%
-
-Feature Engineering        ████████████████████████████ 100%
-
-Leakage Validation         ████████████████████████████ 100%
-
-Model Training             ████████████████████████████ 100%
-
-Model Evaluation           ████████████████████████████ 100%
-
-Calibration                ██████████████████████████░░ 97%
-
-Drift Monitoring           ████████████████░░░░░░░░░░░ 67%
-
-Deployment Readiness       █████████████████████████░░░ 95%
-```
-
----
-
-# 🌐 MODEL LIFECYCLE
+# 📉 FEATURE DRIFT MONITOR
 
 ```mermaid
-gitGraph
+pie title Feature Stability Analysis
 
-commit id:"Data Collection"
+"Stable Features (4)" : 4
 
-commit id:"EDA"
-
-commit id:"Feature Engineering"
-
-commit id:"Leakage Detection"
-
-commit id:"Training"
-
-commit id:"Validation"
-
-commit id:"Calibration"
-
-commit id:"Drift Testing"
-
-commit id:"ONNX Export"
-
-commit id:"Production"
+"Drifted Features (8)" : 8
 ```
 
 ---
 
-# 🏅 ENTERPRISE READINESS SCORECARD
+# 🎯 MODEL CONFIDENCE ENGINE
 
-| Category              | Status |
-| --------------------- | ------ |
-| Data Quality          | ✅      |
-| Leakage Detection     | ✅      |
-| Model Evaluation      | ✅      |
-| Calibration           | ✅      |
-| Explainability        | ✅      |
-| ONNX Export           | ✅      |
-| Drift Monitoring      | ⚠️     |
-| Production Deployment | ✅      |
+## Mean Prediction Confidence
+
+```text
+███████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 46.79%
+```
+
+## Confidence Variability
+
+```text
+█████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 11.40%
+```
+
+## Calibration Error
+
+```text
+█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 3.12%
+```
 
 ---
 
-# 🎖️ FINAL STATUS
+# ⚠️ KNOWN LIMITATIONS
+
+```mermaid
+mindmap
+  root((⚠️ Model Limits))
+
+    Prediction
+      Pre Match Only
+      No Live Events
+
+    Football
+      Injuries
+      Transfers
+      Manager Changes
+      Red Cards
+
+    Data
+      Drift
+      Imbalance
+
+    External
+      League Evolution
+      Tactical Changes
+      Upsets
+```
+
+---
+
+# 🚀 PRODUCTION READINESS MATRIX
+
+```mermaid
+journey
+
+title Production Deployment Readiness
+
+section Data
+
+Quality Validation: 5
+Leakage Detection: 5
+
+section Features
+
+Engineering: 5
+Selection: 5
+
+section Modeling
+
+Training: 5
+Calibration: 5
+
+section Evaluation
+
+Metrics: 5
+Robustness: 4
+
+section Deployment
+
+Serving: 5
+Monitoring: 5
+```
+
+---
+
+# 🎖️ SYSTEM HEALTH DASHBOARD
+
+| Component | Status |
+|------------|------------|
+| Data Quality | 🟢 Healthy |
+| Leakage Validation | 🟢 Passed |
+| Feature Engineering | 🟢 Stable |
+| Model Training | 🟢 Completed |
+| Calibration | 🟢 Good |
+| Drift Monitoring | 🟡 Attention Required |
+| Confidence Engine | 🟢 Active |
+| Production Readiness | 🟢 Ready |
+
+---
+
+# 🏁 FINAL EXECUTIVE SUMMARY
 
 ```text
-╔══════════════════════════════════════════════════════════╗
-║                  STATVAULT MATCH AI                     ║
-╠══════════════════════════════════════════════════════════╣
-║ Accuracy                46.95%                          ║
-║ ROC-AUC                 0.6461                          ║
-║ Top-2 Accuracy          75.51%                          ║
-║ Calibration Error       3.12%                           ║
-║ Feature Count           18                              ║
-║ Dataset Size            230,554                         ║
-║ Drifted Features        8 / 12                          ║
-║ Leakage Status          PASSED                          ║
-║ Deployment Status       READY                           ║
-╚══════════════════════════════════════════════════════════╝
+╔══════════════════════════════════════════════════════════════╗
+║                    STATVAULT MATCH AI                       ║
+╠══════════════════════════════════════════════════════════════╣
+║ DATASET SIZE             : 230,554 Matches                  ║
+║ FEATURES                 : 18                               ║
+║ MODEL                    : XGBoost v2.0                    ║
+║ ACCURACY                 : 46.95%                           ║
+║ BALANCED ACCURACY        : 45.44%                           ║
+║ MACRO F1                : 45.26%                           ║
+║ ROC-AUC                 : 0.6461                           ║
+║ TOP-2 ACCURACY          : 75.51%                           ║
+║ LOG LOSS                : 1.0338                           ║
+║ MEAN CONFIDENCE         : 46.79%                           ║
+║ CALIBRATION ERROR       : 3.12%                            ║
+║ FEATURE DRIFT           : 8 / 12 FEATURES                  ║
+║ LEAKAGE CHECK           : PASSED                           ║
+║ DEPLOYMENT STATUS       : READY                            ║
+╚══════════════════════════════════════════════════════════════╝
 ```
 
 ---
 
 <div align="center">
 
-# 🚀 Production Deployment Approved
+# 🚀 STATVAULT v2.0
 
-### StatVault Match Outcome Prediction Engine
+### Enterprise Football Intelligence Platform
 
-Enterprise Football Intelligence Platform
+**Predict • Analyze • Optimize • Win**
+
+---
+
+Built with XGBoost • 230K+ Matches • Production Ready
 
 </div>
