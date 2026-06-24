@@ -1,223 +1,237 @@
-# 🧠 Intelligence Engine
+<!-- ================= HERO ================= -->
+
+<div align="center">
+
+# ⚽ StatVault AI
+
+### Football Intelligence Platform
+
+**Predict Match Outcomes • Scout Players • Detect Anomalies • Estimate Market Value**
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.11-blue?logo=python">
+  <img src="https://img.shields.io/badge/XGBoost-Latest-orange">
+  <img src="https://img.shields.io/badge/PostgreSQL-16-blue">
+  <img src="https://img.shields.io/badge/ONNX-Ready-success">
+  <img src="https://img.shields.io/badge/Status-Production-green">
+</p>
+
+</div>
+
+---
+
+# 🎥 Demo
+
+<p align="center">
+  <img width="100%" src="assets/demo.gif">
+</p>
+
+---
+
+# 📊 Platform Capabilities
+
+| Capability | Description |
+|------------|-------------|
+| ⚽ Match Prediction | Predict Home Win / Draw / Away Win |
+| 💰 Market Value | Estimate Player Transfer Value |
+| 🧠 Similarity Search | Find Players With Similar Profiles |
+| 🚨 Anomaly Detection | Detect Unusual Player Performance |
+| 📈 Evaluation Suite | Full Metrics & Reports |
+| 🚀 ONNX Deployment | Production-Ready Exports |
+
+---
+
+# 🏛 Architecture
 
 ```mermaid
-flowchart LR
+graph LR
 
-A[Historical Matches]
---> B[Feature Engineering]
+A[Raw Datasets] --> B[Data Validation]
+B --> C[Data Cleaning]
 
-B --> C[Team Form]
+C --> D[Feature Engineering]
 
-B --> D[Goals]
+D --> E[Match Prediction]
+D --> F[Market Value Prediction]
+D --> G[Player Clustering]
+D --> H[Anomaly Detection]
 
-B --> E[xG Metrics]
+E --> I[Model Evaluation]
+F --> I
+G --> I
+H --> I
 
-B --> F[Head To Head]
-
-C --> G[Feature Matrix]
-D --> G
-E --> G
-F --> G
-
-G --> H[XGBoost]
-
-H --> I[Prediction]
+I --> J[ONNX Export]
+J --> K[Deployment]
 ```
 
 ---
 
-# ⚽ Match Prediction Pipeline
+# 🧬 End-to-End ML Lifecycle
 
 ```mermaid
-flowchart TD
+journey
+title StatVault ML Lifecycle
 
-A[Raw Match Data]
+section Data
+Collect Datasets: 5
+Validate Data: 5
+Clean Data: 5
 
-A --> B[Cleaning]
+section Features
+Engineer Features: 5
+Generate Training Sets: 5
 
-B --> C[Feature Generation]
+section Models
+Train Models: 5
+Evaluate Models: 5
 
-C --> D[XGBoost Model]
-
-D --> E[Win Probability]
-
-D --> F[Draw Probability]
-
-D --> G[Loss Probability]
-
-E --> H[Prediction Engine]
-F --> H
-G --> H
+section Deployment
+Export ONNX: 5
+Deploy: 5
 ```
 
 ---
 
-# 🧬 Model Ecosystem
+# 📁 Repository Structure
+
+```text
+statvault-ml
+│
+├── data
+├── notebooks
+├── models
+├── reports
+├── outputs
+│
+├── build_features.py
+├── train_xgboost.py
+├── train_market_value.py
+├── cluster_players.py
+├── detect_anomalies.py
+├── evaluate_models.py
+└── export_onnx.py
+```
+
+---
+
+# ⚙ Data Pipeline
 
 ```mermaid
 flowchart TB
 
-A[Football Dataset]
-
-A --> B[Match Prediction]
-
-A --> C[Market Value]
-
-A --> D[Player Clustering]
-
-A --> E[Anomaly Detection]
-
-B --> F[Classification Models]
-
-C --> G[Regression Models]
-
-D --> H[Unsupervised Learning]
-
-E --> I[Outlier Detection]
+RAW[Raw Data]
+    --> CLEAN[Cleaning]
+    --> FE[Feature Engineering]
+    --> TRAIN[Training]
+    --> EVAL[Evaluation]
+    --> EXPORT[ONNX Export]
+    --> PROD[Production]
 ```
 
 ---
 
-# 📊 Data Lineage
+# 🤖 Models
 
-```mermaid
-flowchart LR
+## ⚽ Match Prediction
 
-A[Raw Sources]
+| Property | Value |
+|-----------|---------|
+| Algorithm | XGBoost |
+| Type | Multi-Class Classification |
+| Classes | Win / Draw / Loss |
+| Target Accuracy | > 60% |
 
-A --> B[Validation]
+---
 
-B --> C[Cleaning]
+## 💰 Market Value Prediction
 
-C --> D[Feature Store]
+| Property | Value |
+|-----------|---------|
+| Algorithm | XGBoost Regressor |
+| Target | Market Value (€) |
+| Metric | R² Score |
 
-D --> E[Training]
+---
 
-E --> F[Models]
+## 🧠 Player Clustering
 
-F --> G[Evaluation]
+| Property | Value |
+|-----------|---------|
+| Algorithm | K-Means |
+| Output | Player Archetypes |
 
-G --> H[Deployment]
+---
+
+## 🚨 Anomaly Detection
+
+| Property | Value |
+|-----------|---------|
+| Algorithm | Isolation Forest |
+| Output | Anomaly Score |
+
+---
+
+# 📈 Example Dashboard
+
+<div align="center">
+  <img width="90%" src="assets/dashboard.png">
+</div>
+
+---
+
+# 🎯 KPI Targets
+
+| Metric | Target |
+|---------|---------|
+| Match Accuracy | > 60% |
+| Market Value R² | > 0.80 |
+| Silhouette Score | > 0.50 |
+| Anomaly Precision | > 75% |
+| Inference Time | < 100 ms |
+
+---
+
+# 🚀 Quick Start
+
+```bash
+git clone repo-url
+
+cd statvault-ml
+
+pip install -r requirements.txt
+
+python build_features.py
+python train_xgboost.py
+python evaluate_models.py
 ```
 
 ---
 
-# 🚀 Production Deployment Architecture
+# 🗺 Roadmap
 
-```mermaid
-flowchart LR
-
-A[Trained Models]
-
-A --> B[Model Registry]
-
-B --> C[ONNX Export]
-
-C --> D[Inference API]
-
-D --> E[Dashboard]
-
-D --> F[Analytics Platform]
-
-D --> G[Third Party Applications]
-```
+- [x] Dataset Collection
+- [x] Exploratory Data Analysis (EDA)
+- [x] Feature Engineering
+- [ ] Match Prediction
+- [ ] Market Value Prediction
+- [ ] Player Clustering
+- [ ] Anomaly Detection
+- [ ] ONNX Export
+- [ ] Deployment
 
 ---
 
-# 🔄 MLOps Lifecycle
+# 📜 License
 
-```mermaid
-flowchart LR
-
-A[Data Collection]
-
-A --> B[Data Validation]
-
-B --> C[Feature Engineering]
-
-C --> D[Model Training]
-
-D --> E[Evaluation]
-
-E --> F[Model Registry]
-
-F --> G[Deployment]
-
-G --> H[Monitoring]
-
-H --> A
-```
+MIT License
 
 ---
 
-# 📈 Performance Intelligence Dashboard
+<div align="center">
 
-```mermaid
-flowchart TD
+### Built for Football Intelligence
 
-A[Model Evaluation]
+⚽ Data → Features → Models → Insights
 
-A --> B[Accuracy]
-
-A --> C[Precision]
-
-A --> D[Recall]
-
-A --> E[F1 Score]
-
-A --> F[ROC AUC]
-
-A --> G[Confusion Matrix]
-```
-
----
-
-# 🏟 Football Intelligence Platform
-
-```mermaid
-flowchart TB
-
-A[Football Data]
-
-A --> B[Player Analytics]
-
-A --> C[Team Analytics]
-
-A --> D[Match Analytics]
-
-B --> E[Scouting]
-
-C --> F[Performance Tracking]
-
-D --> G[Outcome Prediction]
-
-E --> H[Intelligence Layer]
-F --> H
-G --> H
-
-H --> I[Decision Support]
-```
-
----
-
-# ⚡ System Flow
-
-```mermaid
-sequenceDiagram
-
-participant Data
-participant Features
-participant Models
-participant Evaluation
-participant Deployment
-
-Data->>Features: Clean & Transform
-
-Features->>Models: Train
-
-Models->>Evaluation: Evaluate
-
-Evaluation->>Deployment: Export
-
-Deployment->>Deployment: Serve Predictions
-```
+</div>
