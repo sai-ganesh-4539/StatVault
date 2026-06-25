@@ -1,10 +1,6 @@
+Production-Grade Training Documentation**
+End-to-end documentation covering dataset overview, feature engineering, model pipeline, training workflow, evaluation strategy, and deployment readiness.
 
-
-> **Production-Grade Training Documentation**
->
-> End-to-end documentation covering dataset overview, feature engineering, model pipeline, training workflow, evaluation strategy, and deployment readiness.
-
----
 
 # Table of Contents
 
