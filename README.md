@@ -180,16 +180,5 @@ Prediction-->Dashboard
 Prediction-->JSON
 ```
 
-# Production Checklist
 
-- [x] Data Warehouse
-- [x] Feature Engineering
-- [x] Model Training
-- [x] Model Evaluation
-- [ ] SHAP Explainability
-- [ ] Feature Drift Monitoring
-- [ ] Automated Retraining
-- [ ] CI/CD
-- [ ] Model Registry
-- [ ] Experiment Tracking
 
