@@ -13,7 +13,6 @@
 - Performance
 - Data Quality
 - Deployment
-- Production Checklist
 
 ---
 
