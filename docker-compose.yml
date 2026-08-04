@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 services:
   db:
     image: pgvector/pgvector:pg16
@@ -30,24 +29,6 @@ services:
     depends_on:
       db:
         condition: service_healthy
-=======
-version: "3.9"
-
-services:
-  db:
-    image: pgvector/pgvector:pg16
-    container_name: statvault_db
-    restart: unless-stopped
-    environment:
-      POSTGRES_DB:       statvault
-      POSTGRES_USER:     statvault_user
-      POSTGRES_PASSWORD: statvault_pass
-    ports:
-      - "5432:5432"
-    volumes:
-      - pgdata:/var/lib/postgresql/data
-      - ./etl/schema.sql:/docker-entrypoint-initdb.d/schema.sql
->>>>>>> main
 
 volumes:
   pgdata:

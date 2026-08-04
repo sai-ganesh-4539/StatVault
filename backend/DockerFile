@@ -2,19 +2,15 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-# Install system deps
 RUN apt-get update && apt-get install -y --no-install-recommends \
     libpq-dev gcc && \
     rm -rf /var/lib/apt/lists/*
 
-# Python deps
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy backend code
 COPY app/ app/
 
-# Default env (override in docker-compose)
 ENV ML_MODELS_DIR=/ml-models
 ENV CLUSTER_PROFILES_PATH=/ml-models/cluster_profiles.json
 ENV MARKET_VALUE_FEATURES_PATH=/ml-models/market_value_feature_names.txt
