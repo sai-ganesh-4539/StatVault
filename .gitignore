@@ -1,3 +1,78 @@
+<<<<<<< HEAD
+# ==================== PYTHON CACHE ====================
+
+**pycache**/
+*.py[cod]
+*$py.class
+*.so
+
+# ==================== VIRTUAL ENVIRONMENT ====================
+
+.venv/
+venv/
+ENV/
+env/
+.pytest_cache/
+
+# ==================== IDE ====================
+
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# ==================== JUPYTER ====================
+
+.ipynb_checkpoints/
+
+# ==================== ENV ====================
+
+.env
+.env.local
+.env.*.local
+
+# ==================== LOGS ====================
+
+*.log
+logs/
+
+# ==================== TEMP ====================
+
+*.tmp
+*.temp
+
+# ==================== DATABASES ====================
+
+*.sqlite
+*.db
+
+# ==================== RAW DATASETS ====================
+
+ml/data/raw/
+*.csv
+*.xlsx
+
+# ==================== GENERATED REPORTS ====================
+
+ml/reports/
+ml/outputs/
+ml/data/reports/
+
+# ==================== KEEP THESE FILE TYPES ====================
+
+!*.py
+!*.yaml
+!*.yml
+!*.md
+!*.txt
+!*.parquet
+!*.pkl
+!*.npy
+!*.onnx
+!*.json
+=======
 
 .env
 
@@ -8,3 +83,4 @@ __pycache__/
 data/
 
 .vscode/
+>>>>>>> main
