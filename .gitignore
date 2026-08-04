@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ==================== PYTHON CACHE ====================
 
 **pycache**/
@@ -71,3 +72,15 @@ ml/data/reports/
 !*.npy
 !*.onnx
 !*.json
+=======
+
+.env
+
+venv/
+__pycache__/
+*.pyc
+
+data/
+
+.vscode/
+>>>>>>> main

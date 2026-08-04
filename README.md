@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- ================= HERO ================= -->
 
 <div align="center">
@@ -260,3 +261,6 @@ MIT License
 ⚽ Data → Features → Models → Insights
 
 </div>
+=======
+# StatVault
+>>>>>>> main
