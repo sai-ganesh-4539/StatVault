@@ -19,8 +19,7 @@ class Settings(BaseSettings):
     market_value_features_path: Path = Path("../ml/models/market_value_feature_names.txt")
 
     # External API
-    api_football_key: str = ""
-    api_football_base_url: str = "https://api-football-v1.p.rapidapi.com/v3"
+    football_data_org_key: str = ""
 
     @property
     def xgboost_match_path(self) -> Path:
